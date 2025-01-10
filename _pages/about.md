@@ -19,7 +19,7 @@ redirect_from:
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
 
-My research interest includes *natural language processing* and *Large Language Models*..
+My research interest includes *natural language processing* and *Large Language Models*.
 
 
 # 🔥 News
@@ -46,20 +46,20 @@ My research interest includes *natural language processing* and *Large Language 
 - *2024.12* The only one nominated as Jinan Star in the whole College.  (Top 1%)
 - *2024.12* Outstanding undergraduate student at the University Level. (Top 1%)
 - *2024.10* National Scholarship. (Top 1%)
-- 2023.12 National Encouragement Scholarship. (Top 5%)
-- 2023.12 Outstanding Student of Jinan University.
-- 2022.12 National Encouragement Scholarship. (Top 5%)
-- 2022.12 Excellent student backbone of Jinan University.
+- *2023.12* National Encouragement Scholarship. (Top 5%)
+- *2023.12* Outstanding Student of Jinan University.
+- *2022.12* National Encouragement Scholarship. (Top 5%)
+- *2022.12* Excellent student backbone of Jinan University.
 
 # 📖 Educations
-- *2021.09 - now*, Bachelor of Engineering in Network Engineering, Department of Computer Science, College of Information Science and Technology, Jinan University. 
+- *2021.09 - now*, Bachelor of Engineering in Network Engineering, Department of Computer Science, Jinan University. 
 - *2018.09 - 2021.06*, Liudu Middle School, Shantou, Guangdong. 
 
 # 💬 Competitions
 - *2024.05*, Meritorious Mention, Mathematical Contest in Modeling for American College Students (MCM). 
-- 2023.05, Honorable Mention, Mathematical Contest in Modeling for American College Students (ICM).
-- 2023.12, 2nd Prize, The National College Mathematics Competition.
-- 2023.12 3rd Prize, The National College Student Software Testing Competition.
+- *2023.05*, Honorable Mention, Mathematical Contest in Modeling for American College Students (ICM).
+- *2023.12*, 2nd Prize, The National College Mathematics Competition.
+- *2023.12*, 3rd Prize, The National College Student Software Testing Competition.
 
 # 💻 Internships
 - *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
