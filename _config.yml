@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Jiepeng Zhou"
-description              : "An incoming Mphil student in HKUST(gz) as well as a senior undergraduate student in Jinan University. Focusing on NLP and LLMs"
+description              : "An incoming Mphil student in HKUST(gz) as well as a senior undergraduate student in Jinan University. Focusing on NLP and LLMs."
 repository               : "JiepengZhou/JiepengZhou.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Jiepeng Zhou"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "The Hong Kong University of Science and Technology(Guangzhou)"
+  bio              : "The Hong Kong University of Science and Technology (Guangzhou)"
   location         : "Guangzhou, China"
   employer         :
   pubmed           : 
