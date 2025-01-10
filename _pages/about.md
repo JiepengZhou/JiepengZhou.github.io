@@ -18,9 +18,13 @@ redirect_from:
 # 👋 Welcome! 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am now an undergraduate student at [Jinan University](https://www.jnu.edu.cn/main.htm), Guangdong, China. Fortunately, I was selected into the excellent student training program, which only 1% of the whole university were selected. Then, I received a series of scientific research training under the guidance of [Dr.Qingliang Chen](https://faculty.jnu.edu.cn/xxkxjsxy/cql2/list.htm), [Dr.Ke Wang](https://faculty.jnu.edu.cn/xxkxjsxy/wk/list.htm) and [Dr.Lin Cui](https://faculty.jnu.edu.cn/xxkxjsxy/cl6/list.htm).
 
-My research interest includes *natural language processing* and *Large Language Models*.
+From *2022* to *2024*, I participated in the Guangdong Provincial Key Field R&D Program-"Research and Application of Key Technologies for Digital Publishing Platform Based on Artificial Intelligence(Project No.:2022B0101010005)."
+
+During my undergraduate studies, I also participated as the person in charge in the National College Students' Innovation and Entrepreneurship Training Program (Finally received *Excellent results*), the China College Students' "Internet +" Competition, the Challenge Cup and other projects.
+
+My research interest includes *natural language processing* and *Large Language Models*. **I look forward to exploring more possibilities of artificial intelligence in our daily life and making my own achievements.**
 
 
 # 🔥 News
