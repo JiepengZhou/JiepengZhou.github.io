@@ -15,6 +15,7 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
+# 👋 Welcome! 
 <span class='anchor' id='about-me'></span>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
@@ -52,8 +53,9 @@ My research interest includes *natural language processing* and *Large Language 
 - *2022.12* Excellent student backbone of Jinan University.
 
 # 📖 Educations
-- *2021.09 - now*, Bachelor of Engineering in Network Engineering, Department of Computer Science, Jinan University. 
-- *2018.09 - 2021.06*, Liudu Middle School, Shantou, Guangdong. 
+- *2021.09 - now*, Bachelor of Engineering in Network Engineering, Department of Computer Science, Jinan University, Guangdong, China.
+  - Supervised by [Dr. Qingliang Chen](https://faculty.jnu.edu.cn/xxkxjsxy/cql2/list.htm)
+- *2018.09 - 2021.06*, Liudu Middle School, Shantou, Guangdong, China. 
 
 # 💬 Competitions
 - *2024.05*, Meritorious Mention, Mathematical Contest in Modeling for American College Students (MCM). 
@@ -63,3 +65,9 @@ My research interest includes *natural language processing* and *Large Language 
 
 # 💻 Internships
 - *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+
+  ------
+
+<p align="center">
+  <i>I know I am not the perfect one, yet aspire to chase the world and achieve greatness@Jiepeng Zhou</i>
+</p>
