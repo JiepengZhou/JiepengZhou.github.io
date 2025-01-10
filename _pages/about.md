@@ -18,7 +18,9 @@ redirect_from:
 # 👋 Welcome! 
 <span class='anchor' id='about-me'></span>
 
-I am now an undergraduate student at [Jinan University](https://www.jnu.edu.cn/main.htm), Guangdong, China. At the same time, I have passed the interview with the Hong Kong University of Science and Technology(Guangzhou)'s Red Bird Mphil committee and will pursue an Mphil degree at HKUST(GZ) starting in September 2025. Fortunately, I was selected into the excellent student training program during my undergraduate studies, which only 1% of the whole university were selected. Then, I received a series of scientific research training under the guidance of [Dr.Qingliang Chen](https://faculty.jnu.edu.cn/xxkxjsxy/cql2/list.htm), [Dr.Ke Wang](https://faculty.jnu.edu.cn/xxkxjsxy/wk/list.htm) and [Dr.Lin Cui](https://faculty.jnu.edu.cn/xxkxjsxy/cl6/list.htm).
+I am now an undergraduate student at [Jinan University](https://www.jnu.edu.cn/main.htm), Guangdong, China. At the same time, I have passed the interview with the [Hong Kong University of Science and Technology(Guangzhou)](https://www.hkust-gz.edu.cn/zh/)'s Red Bird Mphil committee and will pursue an Mphil degree at HKUST(GZ) starting in September 2025. 
+
+Fortunately, I was selected into the excellent student training program during my undergraduate studies, which only 1% of the whole university were selected. Then, I received a series of scientific research training under the guidance of [Dr.Qingliang Chen](https://faculty.jnu.edu.cn/xxkxjsxy/cql2/list.htm), [Dr.Ke Wang](https://faculty.jnu.edu.cn/xxkxjsxy/wk/list.htm) and [Dr.Lin Cui](https://faculty.jnu.edu.cn/xxkxjsxy/cl6/list.htm).
 
 From *2022* to *2024*, I participated in the Guangdong Provincial Key Field R&D Program-"Research and Application of Key Technologies for Digital Publishing Platform Based on Artificial Intelligence(Project No.:2022B0101010005)."
 
