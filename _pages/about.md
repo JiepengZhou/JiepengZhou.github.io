@@ -59,7 +59,7 @@ My research interest includes *natural language processing* and *Large Language 
 - *2022.12* Excellent student backbone of Jinan University.
 
 # 📖 Educations
-- *2021.09 - now*, Bachelor of Engineering in Network Engineering, Department of Computer Science, Jinan University, Guangdong, China.
+- *2021.09 - 2025.06(Expected)*, Bachelor of Engineering in Network Engineering, Department of Computer Science, Jinan University, Guangdong, China.
   - Supervised by [Dr. Qingliang Chen](https://faculty.jnu.edu.cn/xxkxjsxy/cql2/list.htm)
 - *2018.09 - 2021.06*, Liudu Middle School, Shantou, Guangdong, China. 
 
