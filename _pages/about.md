@@ -30,17 +30,19 @@ My research interest includes *natural language processing* and *Large Language 
 
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2024.08*: &nbsp; An invention patent on the BHL model was accepted (The first author). 
+- *2024.07*: &nbsp; Two software copyrights were authorized (Independent first author).
+- *2024.04*: &nbsp; A utility model patent was accepted (The third author).
+- *2023.02*: &nbsp; 🎉🎉 My first Journal Paper on digital IP copyright protection technology under the alliance blockchain environment was Accepted (The third author).
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal Paper</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+[Digital IP copyright protection technology under the alliance blockchain environment](https://journal.cuc.edu.cn/mediaCCUploadFiles/202304080248322a120180d76b44e3b7fcbcdcac3974d5.pdf)
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+Wen Yinhua, Zheng Hanghan, **Zhou Jiepeng**, Feng Zhengjie, Wen Jianwei, Lin Jie, Wang Ke, Lin Weiguo
 
 [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
@@ -68,9 +70,11 @@ My research interest includes *natural language processing* and *Large Language 
 - *2023.05*, Honorable Mention, Mathematical Contest in Modeling for American College Students (ICM).
 - *2023.12*, 2nd Prize, The National College Mathematics Competition.
 - *2023.12*, 3rd Prize, The National College Student Software Testing Competition.
+- *2023.11*, 3rd Prize, The Guangdong-HongKong-Macao Greater Bay Area Financial Mathematical Modeling Competition.
+- *2022.12*, 3rd Prize, The Asia-Pacific Undergraduate Mathematical Modeling Contest
 
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+- *2022.05 - 2024.05*, The Guangdong Provincial Key Field R&D Program, Guangdong, China
 
   ------
 
