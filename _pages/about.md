@@ -47,7 +47,8 @@ My research interest includes *natural language processing* and *Large Language 
 Wen Yinhua, Zheng Hanghan, **Zhou Jiepeng**, Feng Zhengjie, Wen Jianwei, Lin Jie, Wang Ke, Lin Weiguo
 
 [**Project**](https://journal.cuc.edu.cn/mediaCCUploadFiles/202304080248322a120180d76b44e3b7fcbcdcac3974d5.pdf) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- Verified the feasibility of using blockchain technology for copyright protection.
+- Develop a corresponding platform to implement the process of blockchain-marked copyright.
 </div>
 </div>
 
@@ -56,12 +57,14 @@ Wen Yinhua, Zheng Hanghan, **Zhou Jiepeng**, Feng Zhengjie, Wen Jianwei, Lin Jie
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal Paper</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Digital IP copyright protection technology under the alliance blockchain environment](https://journal.cuc.edu.cn/mediaCCUploadFiles/202304080248322a120180d76b44e3b7fcbcdcac3974d5.pdf)
+[A deep authentication technology for distinguishing Generated Text from Human Text based on the BHL model]()
 
-Wen Yinhua, Zheng Hanghan, **Zhou Jiepeng**, Feng Zhengjie, Wen Jianwei, Lin Jie, Wang Ke, Lin Weiguo
+**Zhou Jiepeng**, Zhuoxing Li, Zhuoye Yang, Bo Yang
 
-[**Project**](https://journal.cuc.edu.cn/mediaCCUploadFiles/202304080248322a120180d76b44e3b7fcbcdcac3974d5.pdf) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+[**Project**]() <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- Train a large model capable of distinguishing generated text from human text by Bert and LSTM combined with the Attention mechanism.
+- The BHL model was compared with models such as TextCNN, TextRCNN, and BiLSTM, and an ablation experiment was performed with Bert-Han to verify the model performance.
+- The model achieved an accuracy of over 97% on the discrimination task.
 </div>
 </div>
 
