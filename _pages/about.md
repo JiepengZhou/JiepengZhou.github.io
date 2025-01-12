@@ -39,7 +39,7 @@ My research interest includes *natural language processing* and *Large Language 
 
 - 🎓**Published**
   
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal Paper</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal Paper</div><img src='../images/Papers/BlockChain.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Digital IP copyright protection technology under the alliance blockchain environment](https://journal.cuc.edu.cn/mediaCCUploadFiles/202304080248322a120180d76b44e3b7fcbcdcac3974d5.pdf)
@@ -54,7 +54,7 @@ Wen Yinhua, Zheng Hanghan, **Zhou Jiepeng**, Feng Zhengjie, Wen Jianwei, Lin Jie
 
 - 🎓**Under Review**
   
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal Paper</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal Paper</div><img src='../images/Papers/BHL.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [A deep authentication technology for distinguishing Generated Text from Human Text based on the BHL model]()
