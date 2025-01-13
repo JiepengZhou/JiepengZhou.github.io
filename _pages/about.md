@@ -28,7 +28,7 @@ During my undergraduate studies, I also participated as the person in charge in 
 
 My research interest includes *natural language processing* and *Large Language Models*. **I look forward to exploring more possibilities of artificial intelligence in our daily life and making my own achievements.**
 
-You can find my CV here: [Jiepeng Zhou's Curriculum Vitae](../docs/Jiepeng_Zhou_CV.pdf).
+You can find my CV here: [Jiepeng's Curriculum Vitae](../docs/Jiepeng_Zhou_CV.pdf).
 
 # 🔥 News
 - *2024.08*: &nbsp; An invention patent on the BHL model was accepted (The first author). 
