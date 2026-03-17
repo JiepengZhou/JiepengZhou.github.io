@@ -1,22 +1,12 @@
-# main links links
+# 与 about 首页板块顺序一致（首页首项为 Homepage → #about-me）
 main:
-  - title: "About Me"
-    url: "/#about-me"
-
-  - title: "News"
-    url: "/#-news"
-
-  - title: "Publications"
-    url: "/#-publications"
-
-  - title: "Honors and Awards"
-    url: "/#-honors-and-awards"
-
   - title: "Educations"
-    url: "/#-educations"
-
-  - title: "Competitions"
-    url: "/#-competitions"
-
+    url: "/#educations"
+  - title: "Publications"
+    url: "/#publications"
   - title: "Internships"
-    url: "/#-internships"
+    url: "/#internships"
+  - title: "Honors and Awards"
+    url: "/#honors-and-awards"
+  - title: "Competitions"
+    url: "/#competitions"

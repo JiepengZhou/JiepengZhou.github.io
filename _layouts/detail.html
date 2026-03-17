@@ -1,0 +1,53 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="detail-page">
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <div id="main" role="main" class="main--detail">
+      <div class="detail-box">
+        {% if page.pub_id %}
+        <div class="detail-lang">
+          <a class="detail-lang__btn {% if page.lang == 'zh' %}is-active{% endif %}" href="{{ site.baseurl }}/detail/{{ page.pub_id }}-zh/">中文</a>
+          <span class="detail-lang__sep">/</span>
+          <a class="detail-lang__btn {% if page.lang == 'en' %}is-active{% endif %}" href="{{ site.baseurl }}/detail/{{ page.pub_id }}-en/">English</a>
+        </div>
+        {% endif %}
+        <div class="detail-box__body">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-bottom" role="contentinfo">
+      <div class="site-bottom__inner">
+        <div class="site-bottom__quote">
+          <span class="site-bottom__quote-mark">"</span>
+          <span class="site-bottom__quote-text">I know I am not the perfect one, yet aspire to chase the world and achieve greatness.</span>
+          <span class="site-bottom__quote-mark">"</span>
+        </div>
+        <div class="site-bottom__meta">
+          <div class="site-bottom__copyright">
+            &copy; {{ site.time | date: "%Y" }} {{ site.author.name | default: site.title }}
+          </div>
+          <div class="site-bottom__updated">
+            Last updated: {{ site.time | date: "%b %-d, %Y" }}
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

@@ -15,99 +15,88 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-# 👋 Welcome! 
-<span class='anchor' id='about-me'></span>
+<section class="home-section" id="about-me">
+  <h2 class="home-section__title">👋 Welcome！</h2>
+  <div class="home-section__body" markdown="1">
 
-I am now an undergraduate student at [Jinan University](https://www.jnu.edu.cn/main.htm), Guangdong, China. At the same time, I have passed the interview with the [Hong Kong University of Science and Technology(Guangzhou)](https://www.hkust-gz.edu.cn/zh/)'s Red Bird Mphil committee and will pursue an Mphil degree at HKUST(GZ) starting in September 2025. 
+Here is a homepage about Jiepeng.
 
-Fortunately, I was selected into the excellent student training program during my undergraduate studies, which only 1% of the whole university were selected. Then, I received a series of scientific research training under the guidance of [Dr.Qingliang Chen](https://faculty.jnu.edu.cn/xxkxjsxy/cql2/list.htm), [Dr.Ke Wang](https://faculty.jnu.edu.cn/xxkxjsxy/wk/list.htm) and [Dr.Lin Cui](https://faculty.jnu.edu.cn/xxkxjsxy/cl6/list.htm).
+  </div>
+  <div class="about-actions">
+    <a href="../assets/Jiepeng_Zhou_CV.pdf" class="about-btn" target="_blank" rel="noopener">English CV</a>
+    <a href="../assets/Jiepeng_Zhou_CV_CN.pdf" class="about-btn" target="_blank" rel="noopener">中文简历</a>
+    <div class="about-contact">
+      <button type="button" class="about-btn about-btn--secondary">Contact</button>
+      <div class="about-contact-card">
+        <div class="about-contact-card__row">
+          <span class="about-contact-card__label">Phone</span>
+          <span class="about-contact-card__value">{{ site.author.phone }}</span>
+        </div>
+        <div class="about-contact-card__row">
+          <span class="about-contact-card__label">WeChat</span>
+          <span class="about-contact-card__value">{{ site.author.wechat }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-From *2022* to *2024*, I participated in the Guangdong Provincial Key Field R&D Program-"Research and Application of Key Technologies for Digital Publishing Platform Based on Artificial Intelligence(Project No.:2022B0101010005)."
+<section class="home-section" id="educations">
+  <h2 class="home-section__title">📖 Educations</h2>
+  <div class="home-section__body" markdown="1">
 
-During my undergraduate studies, I also participated as the person in charge in the National College Students' Innovation and Entrepreneurship Training Program (Finally received *Excellent results*), the China College Students' "Internet +" Competition, the Challenge Cup and other projects.
+    {% capture _education_raw %}{% include_relative education.md %}{% endcapture %}
+    {% assign _education_body = _education_raw | split: '---' | last %}
+    {% assign _education_body = _education_body | replace_first: '# 📖 Educations', '' %}
+    {{ _education_body | markdownify }}
 
-My research interest includes *natural language processing* and *Large Language Models*. **I look forward to exploring more possibilities of artificial intelligence in our daily life and making my own achievements.**
+  </div>
+</section>
 
-You can find my CV here: [Jiepeng's Curriculum Vitae](../assets/Jiepeng_Zhou_CV.pdf).
+<section class="home-section" id="publications">
+  <h2 class="home-section__title">📝 Publications</h2>
+  <div class="home-section__body" markdown="1">
 
-# 🔥 News
-- *2024.08*: &nbsp; An invention patent on the BHL model was accepted (The first author). 
-- *2024.07*: &nbsp; Two software copyrights were authorized (Independent first author).
-- *2024.04*: &nbsp; A utility model patent was accepted (The third author).
-- *2023.02*: &nbsp; 🎉🎉 My first Journal Paper on digital IP copyright protection technology under the alliance blockchain environment was Accepted (The third author).
+    {% capture _publications_raw %}{% include_relative publications.md %}{% endcapture %}
+    {% assign _publications_body = _publications_raw | split: '---' | last %}
+    {% assign _publications_body = _publications_body | replace_first: '# 📝 Publications', '' %}
+    {{ _publications_body | markdownify }}
 
-# 📝 Publications 
+  </div>
+</section>
 
-- 🎓**Published**
-  
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal Paper</div><img src='../images/Papers/BlockChain.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+<section class="home-section" id="internships">
+  <h2 class="home-section__title">💻 Internships</h2>
+  <div class="home-section__body" markdown="1">
 
-[Digital IP copyright protection technology under the alliance blockchain environment](https://journal.cuc.edu.cn/mediaCCUploadFiles/202304080248322a120180d76b44e3b7fcbcdcac3974d5.pdf)
+    {% capture _internships_raw %}{% include_relative internships.md %}{% endcapture %}
+    {% assign _internships_body = _internships_raw | split: '---' | last %}
+    {% assign _internships_body = _internships_body | replace_first: '# 💻 Internships', '' %}
+    {{ _internships_body | markdownify }}
 
-Wen Yinhua, Zheng Hanghan, **Zhou Jiepeng**, Feng Zhengjie, Wen Jianwei, Lin Jie, Wang Ke, Lin Weiguo
+  </div>
+</section>
 
-[**Project**](https://journal.cuc.edu.cn/mediaCCUploadFiles/202304080248322a120180d76b44e3b7fcbcdcac3974d5.pdf) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Verified the feasibility of using blockchain technology for copyright protection.
-- Develop a corresponding platform to implement the process of blockchain-marked copyright.
-</div>
-</div>
+<section class="home-section" id="honors-and-awards">
+  <h2 class="home-section__title">🎖 Honors and Awards</h2>
+  <div class="home-section__body" markdown="1">
 
-- 🎓**Under Review**
-  
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal Paper</div><img src='../images/Papers/BHL.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+    {% capture _honors_raw %}{% include_relative honors.md %}{% endcapture %}
+    {% assign _honors_body = _honors_raw | split: '---' | last %}
+    {% assign _honors_body = _honors_body | replace_first: '# 🎖 Honors and Awards', '' %}
+    {{ _honors_body | markdownify }}
 
-[A deep authentication technology for distinguishing Generated Text from Human Text based on the BHL model]()
+  </div>
+</section>
 
-**Zhou Jiepeng**, Zhuoxing Li, Zhuoye Yang, Bo Yang
+<section class="home-section" id="competitions">
+  <h2 class="home-section__title">💬 Competitions</h2>
+  <div class="home-section__body" markdown="1">
 
-[**Project**]() <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Train a large model capable of distinguishing generated text from human text by Bert and LSTM combined with the Attention mechanism.
-- The BHL model was compared with models such as TextCNN, TextRCNN, and BiLSTM, and an ablation experiment was performed with Bert-Han to verify the model performance.
-- The model achieved an accuracy of over 97% on the discrimination task.
-</div>
-</div>
+    {% capture _competitions_raw %}{% include_relative competitions.md %}{% endcapture %}
+    {% assign _competitions_body = _competitions_raw | split: '---' | last %}
+    {% assign _competitions_body = _competitions_body | replace_first: '# 💬 Competitions', '' %}
+    {{ _competitions_body | markdownify }}
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal Paper</div><img src='../images/Papers/Gradingmodel.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Grading Model with BiLSTM and Feature Extraction Manually]()
-
-**Zhou Jiepeng**, Zhuoye Yang, Zhizhao Li
-
-[**Project**]() <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Use bidirectional BiLSTM and Bert pre-training model to compare the similarity of two texts.
-- The model achieved an accuracy of over 83% in comparison performance. 
-</div>
-</div>
-# 🎖 Honors and Awards
-- *2024.12* The only one nominated as Jinan Star in the whole College.  (Top 1%)
-- *2024.12* Outstanding undergraduate student at the University Level. (Top 1%)
-- *2024.10* National Scholarship. (Top 1%)
-- *2023.12* National Encouragement Scholarship. (Top 5%)
-- *2023.12* Outstanding Student of Jinan University.
-- *2022.12* National Encouragement Scholarship. (Top 5%)
-- *2022.12* Excellent student backbone of Jinan University.
-
-# 📖 Educations
-- *2021.09 - 2025.06(Expected)*, Bachelor of Engineering in Network Engineering, Department of Computer Science, Jinan University, Guangdong, China.
-  - Supervised by [Dr. Qingliang Chen](https://faculty.jnu.edu.cn/xxkxjsxy/cql2/list.htm)
-- *2018.09 - 2021.06*, Liudu Middle School, Shantou, Guangdong, China. 
-
-# 💬 Competitions
-- *2024.05*, Meritorious Mention, Mathematical Contest in Modeling for American College Students (MCM). 
-- *2023.05*, Honorable Mention, Mathematical Contest in Modeling for American College Students (ICM).
-- *2023.12*, 2nd Prize, The National College Mathematics Competition.
-- *2023.12*, 3rd Prize, The National College Student Software Testing Competition.
-- *2023.11*, 3rd Prize, The Guangdong-HongKong-Macao Greater Bay Area Financial Mathematical Modeling Competition.
-- *2022.12*, 3rd Prize, The Asia-Pacific Undergraduate Mathematical Modeling Contest
-
-# 💻 Internships
-- *2022.05 - 2024.05*, The Guangdong Provincial Key Field R&D Program, Guangdong, China
-
-  ------
-
-<p align="center">
-  <i>I know I am not the perfect one, yet aspire to chase the world and achieve greatness@Jiepeng Zhou</i>
-</p>
+  </div>
+</section>

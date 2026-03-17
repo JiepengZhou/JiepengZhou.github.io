@@ -5,9 +5,12 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+# 关闭 safe 模式以便加载 _plugins（本地 Ruby 4 兼容补丁）
+safe                    : false
+
 # Site Settings
 title                    : "Jiepeng Zhou"
-description              : "A senior undergraduate student at Jinan University, focusing on machine learning, especially natural language processing (NLP) and large language models (LLMs)."
+description              : "I am a first-year MPhil student in Data Science at the Hong Kong University of Science and Technology (Guangzhou Campus), my research interests include Multimodal Large Language Models, Light Reasoning and Agentic AI."
 repository               : "JiepengZhou/JiepengZhou.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,12 +26,14 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Jiepeng Zhou"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Jinan University"
+  bio              : "MPhil Student@HKUST(GZ)"
   location         : "Guangzhou, China"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "jiepeng_zhou@163.com"
+  email            : "jzhou827@connect.hkust-gz.edu.cn"
+  phone            : "13794132099"
+  wechat           : "jaypern1128"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
