@@ -10,7 +10,7 @@ author_profile: true
   <div class="intern-entry">
     <div class="intern-item">
     <div class="intern-item__logo">
-      <img src="/" alt="Internship logo placeholder" loading="lazy" />
+      <img src="{{ site.baseurl }}/images/logos/JD.com_logo_processed.png" alt="JD" loading="lazy" />
     </div>
     <div class="intern-item__main">
       <div class="intern-item__title">JD</div>
@@ -26,7 +26,7 @@ author_profile: true
   <div class="intern-entry">
     <div class="intern-item">
     <div class="intern-item__logo">
-      <img src="/" alt="Internship logo placeholder" loading="lazy" />
+      <img src="{{ site.baseurl }}/images/logos/pku.png" alt="Internship logo placeholder" loading="lazy" />
     </div>
     <div class="intern-item__main">
       <div class="intern-item__title">DCAI, Peking University</div>
@@ -42,7 +42,7 @@ author_profile: true
   <div class="intern-entry">
     <div class="intern-item">
     <div class="intern-item__logo">
-      <img src="/" alt="Internship logo placeholder" loading="lazy" />
+      <img src="{{ site.baseurl }}/images/logos/jnu.png" alt="Internship logo placeholder" loading="lazy" />
     </div>
     <div class="intern-item__main">
       <div class="intern-item__title">Advanced Network Lab, Jinan University</div>
