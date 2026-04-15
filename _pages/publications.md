@@ -11,68 +11,89 @@ author_profile: true
 <div class="pub-list">
   <article class="pub-card">
     <div class="pub-card__thumb">
-      <img src="../images/Papers/BlockChain.png" alt="Blockchain copyright protection" />
+      <img src="../images/Papers/BCV3.png" alt="BCV3" />
     </div>
     <div class="pub-card__body">
       <h3 class="pub-card__title">
-        <a href="https://journal.cuc.edu.cn/mediaCCUploadFiles/202304080248322a120180d76b44e3b7fcbcdcac3974d5.pdf" target="_blank" rel="noopener">
-          Digital IP copyright protection technology under the alliance blockchain environment
+        <a target="_blank" rel="noopener">
+          BrowseComp-V<sup>3</sup>: A Visual, Vertical, and Verifiable Benchmark for Multimodal Browsing Agents
         </a>
       </h3>
       <div class="pub-card__meta">
-        <span class="pub-card__authors">Wen Yinhua, Zheng Hanghan, <strong>Jiepeng Zhou</strong>, Feng Zhengjie, Wen Jianwei, Lin Jie, Wang Ke, Lin Weiguo</span>
-        <span class="pub-card__type">Journal Paper</span>
+        <span class="pub-card__authors">Huanyao Zhang, <strong>Jiepeng Zhou</strong>, Bo Li, Bowen Zhou, Yanzhe Shan... <span class="pub-card__more-authors">+20</span></span>
+        <span class="pub-card__type">Arxiv Preprint</span>
       </div>
       <p class="pub-card__abstract">
-        Verified the feasibility of using blockchain technology for copyright protection, and developed a practical platform to implement the end-to-end process of blockchain-marked copyright.
+        A visual web browsing benchmark for multimodal Agents, spanning 5 vertical domains with cross-page aggregation and multi-hop reasoning tasks to evaluate visual grounding capabilities.
       </p>
       <div class="pub-card__actions">
-        <a class="pub-btn" href="https://journal.cuc.edu.cn/mediaCCUploadFiles/202304080248322a120180d76b44e3b7fcbcdcac3974d5.pdf" target="_blank" rel="noopener">Paper</a>
-        <a class="pub-btn pub-btn--ghost" href="{{ site.baseurl }}/detail/blockchain-en/" rel="noopener">Detail</a>
+        <a class="pub-btn" href="https://arxiv.org/abs/2602.12876" target="_blank" rel="noopener">Paper</a>
+        <a class="pub-btn pub-btn--ghost" href="{{ site.baseurl }}/detail/bcv3-en/" rel="noopener">Detail</a>
       </div>
     </div>
   </article>
 
   <article class="pub-card">
     <div class="pub-card__thumb">
-      <img src="../images/Papers/BHL.png" alt="BHL model" />
+      <img src="../images/Papers/mind.png" alt="MIND" />
     </div>
     <div class="pub-card__body">
       <h3 class="pub-card__title">
-        A deep authentication technology for distinguishing Generated Text from Human Text based on the BHL model
+        MIND: From Passive Mimicry to Active Reasoning through Capability-Aware Multi-Perspective CoT Distillation
       </h3>
       <div class="pub-card__meta">
-        <span class="pub-card__authors"><strong>Jiepeng Zhou</strong>, Zhuoxing Li, Zhuoye Yang, Bo Yang</span>
-        <span class="pub-card__type">Under review</span>
+        <span class="pub-card__authors">Jin Cui*, Jiaqi Guo*, <strong>Jiepeng Zhou*</strong>, Ruixuan Yang, Jiayi Lu... <span class="pub-card__more-authors">+4</span></span>
+        <span class="pub-card__type">ACL 2026, CCF A</span>
       </div>
       <p class="pub-card__abstract">
-        We design a BHL model that combines BERT and LSTM with attention to distinguish generated text from human-written text, with extensive comparison and ablation studies against strong baselines.
+        A capability-aware distillation framework introducing 8 reasoning perspectives (e.g., Socratic) with dynamic CoT path selection, surpassing larger models in reasoning and cross-domain generalization at 7B scale.
       </p>
       <div class="pub-card__actions">
-        <a class="pub-btn pub-btn--ghost" href="#" target="_blank" rel="noopener">Paper (coming soon)</a>
-        <a class="pub-btn pub-btn--ghost" href="{{ site.baseurl }}/detail/bhl-en/" rel="noopener">Detail</a>
+        <a class="pub-btn" href="https://arxiv.org/abs/2601.03717" target="_blank" rel="noopener">Paper</a>
+        <a class="pub-btn pub-btn--ghost" href="{{ site.baseurl }}/detail/mind-en/" rel="noopener">Detail</a>
       </div>
     </div>
   </article>
 
   <article class="pub-card">
     <div class="pub-card__thumb">
-      <img src="../images/Papers/Gradingmodel.png" alt="Grading model" />
+      <img src="../images/Papers/compact.png" alt="compact" />
     </div>
     <div class="pub-card__body">
       <h3 class="pub-card__title">
-        Grading Model with BiLSTM and Feature Extraction Manually
+        “The Whole Is Greater Than the Sum of Its Parts”: A Compatibility-Aware Multi-Teacher CoT Distillation Framework
       </h3>
       <div class="pub-card__meta">
-        <span class="pub-card__authors"><strong>Jiepeng Zhou</strong>, Zhuoye Yang, Zhizhao Li</span>
-        <span class="pub-card__type">Under review</span>
+        <span class="pub-card__authors">Jin Cui*, Jiaqi Guo*, <strong>Jiepeng Zhou*</strong>, Ruixuan Yang, Jiayi Lu... <span class="pub-card__more-authors">+4</span></span>
+        <span class="pub-card__type">Arxiv Preprint</span>
       </div>
       <p class="pub-card__abstract">
-        A grading model that combines manually designed features with BiLSTM and BERT-style representations to measure text similarity, achieving over 83% accuracy on grading benchmarks.
+        A multi-teacher distillation framework that dynamically fuses diverse teacher biases, enabling active reasoning internalization in lightweight models under minimal data.
       </p>
       <div class="pub-card__actions">
-        <a class="pub-btn pub-btn--ghost" href="#" target="_blank" rel="noopener">Paper (coming soon)</a>
-        <a class="pub-btn pub-btn--ghost" href="{{ site.baseurl }}/detail/grading-en/" rel="noopener">Detail</a>
+        <a class="pub-btn" href="https://arxiv.org/abs/2601.13992" target="_blank" rel="noopener">Paper</a>
+        <a class="pub-btn pub-btn--ghost" href="{{ site.baseurl }}/detail/compact-en/" rel="noopener">Detail</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub-card">
+    <div class="pub-card__thumb">
+      <img src="../images/Papers/joyflash.png" alt="JOYFLASH" />
+    </div>
+    <div class="pub-card__body">
+      <h3 class="pub-card__title">
+        JoyAI-LLM Flash: Advancing Mid-Scale LLMs with Token Efficiency
+      </h3>
+      <div class="pub-card__meta">
+        <span class="pub-card__authors">Chao Xue, Xiaodong He,... <span class="pub-card__more-authors">+70</span>... <strong>Jiepeng Zhou</strong>,... <span class="pub-card__more-authors">+9</span></span>
+        <span class="pub-card__type">Arxiv Preprint</span>
+      </div>
+      <p class="pub-card__abstract">
+        A reinforcement learning algorithm enabling multi-scale policy optimization with stable thinking-mode switching, achieving superior token efficiency across comprehensive benchmarks.
+      </p>
+      <div class="pub-card__actions">
+        <a class="pub-btn" href="https://arxiv.org/abs/2604.03044" target="_blank" rel="noopener">Paper</a>
       </div>
     </div>
   </article>

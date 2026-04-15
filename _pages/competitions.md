@@ -18,9 +18,8 @@ author_profile: true
   </div>
 </div>
 
-<details class="kv-details">
-  <summary class="kv-view-all" data-open-text="Collapse" data-closed-text="View All Competitions">View All Competitions</summary>
-  <div class="kv-list kv-list--all">
+<div class="kv-expandable">
+  <div class="kv-list kv-list--all" style="display:none;">
     <div class="kv-item">
       <div class="kv-item__main"><strong>2nd Prize</strong>, The National College Mathematics Competition</div>
       <div class="edu-item__date">2023.12</div>
@@ -38,4 +37,5 @@ author_profile: true
       <div class="edu-item__date">2022.12</div>
     </div>
   </div>
-</details>
+  <button class="kv-view-all" onclick="var list=this.previousElementSibling;var open=list.style.display!=='none';list.style.display=open?'none':'block';this.textContent=open?'View All Competitions':'Collapse';">View All Competitions</button>
+</div>

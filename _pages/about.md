@@ -24,7 +24,7 @@ Here is a homepage about Jiepeng.
   </div>
   <div class="about-actions">
     <a href="../assets/Jiepeng_Zhou_CV.pdf" class="about-btn" target="_blank" rel="noopener">English CV</a>
-    <a href="../assets/Jiepeng_Zhou_CV_CN.pdf" class="about-btn" target="_blank" rel="noopener">中文简历</a>
+    <a href="../files/Jiepeng_Zhou_CV_CN.pdf" class="about-btn" target="_blank" rel="noopener">中文简历</a>
     <div class="about-contact">
       <button type="button" class="about-btn about-btn--secondary">Contact</button>
       <div class="about-contact-card">

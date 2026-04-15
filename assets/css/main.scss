@@ -372,6 +372,7 @@ body:has(.home-section) {
 .pub-card {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
   padding: 1rem 1.1rem;
   border-radius: 10px;
@@ -380,8 +381,8 @@ body:has(.home-section) {
   box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
 }
 .pub-card__thumb {
-  flex: 0 0 180px;
-  max-width: 220px;
+  flex: 0 0 340px;
+  max-width: 380px;
 }
 .pub-card__thumb img {
   display: block;
@@ -418,6 +419,12 @@ body:has(.home-section) {
 }
 .pub-card__authors {
   color: #111;
+}
+.pub-card__more-authors {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #9ca3af;
+  vertical-align: baseline;
 }
 .pub-card__type {
   display: block;
@@ -587,6 +594,7 @@ body:has(.home-section) {
   margin-top: 0.55rem;
   margin-left: calc(44px + 0.9rem);
   color: #444;
+  font-size: 0.85em;
   line-height: 1.5;
 }
 @media (max-width: 700px) {
@@ -633,14 +641,14 @@ body:has(.home-section) {
   font-weight: 600;
 }
 
-.kv-details {
-  margin-top: 0.6rem;
+.kv-expandable {
+  margin-top: 0;
 }
-.kv-details > summary {
-  list-style: none;
+.kv-expandable .kv-list--all {
+  margin-top: 0;
 }
-.kv-details > summary::-webkit-details-marker {
-  display: none;
+.kv-expandable .kv-list--all .kv-item:first-child {
+  border-top: 1px solid #f0f0f0;
 }
 .kv-view-all {
   display: inline-flex;
@@ -655,27 +663,7 @@ body:has(.home-section) {
   background: #fff;
   border: 1px solid #93c5fd;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-}
-.kv-details[open] .kv-view-all {
-  color: #111827;
-  border-color: #d1d5db;
-}
-.kv-details .kv-view-all {
   margin: 0.9rem auto 0;
-}
-
-/* 用 CSS 切换按钮文案（不依赖 JS） */
-.kv-details .kv-view-all::before {
-  content: attr(data-closed-text);
-}
-.kv-details[open] .kv-view-all::before {
-  content: attr(data-open-text);
-}
-.kv-details .kv-view-all {
-  font-size: 0; /* 隐藏原始文本，避免重复 */
-}
-.kv-details .kv-view-all::before {
-  font-size: 0.95rem;
 }
 
 /* ========== 页面底部（Quote / Copyright / Last updated） ========== */
