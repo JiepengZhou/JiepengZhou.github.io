@@ -761,6 +761,62 @@ body.detail-page {
 .detail-box__body > *:first-child {
   margin-top: 0;
 }
+/* detail 页代码块：加大字号 */
+.detail-box__body pre {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 500px;
+}
+.detail-box__body code {
+  font-size: 0.95rem;
+  white-space: pre;
+}
+/* 可折叠代码块 */
+.detail-box__body details.code-fold {
+  margin: 0.8rem 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.detail-box__body details.code-fold > summary {
+  cursor: pointer;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  user-select: none;
+  list-style: none;
+}
+.detail-box__body details.code-fold > summary::-webkit-details-marker {
+  display: none;
+}
+.detail-box__body details.code-fold > summary::before {
+  content: "▶ ";
+  font-size: 0.75rem;
+  margin-right: 0.3rem;
+}
+.detail-box__body details.code-fold[open] > summary::before {
+  content: "▼ ";
+}
+.detail-box__body details.code-fold[open] > summary {
+  border-bottom: 1px solid #e5e7eb;
+}
+.detail-box__body details.code-fold > pre {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.detail-box__body details.code-fold > pre code {
+  white-space: pre;
+  display: block;
+}
 @media (max-width: 767px) {
   #main.main--detail {
     padding-left: 0.5rem;
