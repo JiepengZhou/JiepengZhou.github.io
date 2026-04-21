@@ -50,6 +50,14 @@ layout: compress
 
     <script>
     (function(){
+      var konami=[38,38,40,40,37,39,37,39,66,65],pos=0;
+      document.addEventListener('keydown',function(e){
+        if(e.keyCode===konami[pos]){pos++;if(pos===konami.length){window.location.href='/blog/';pos=0;}}else{pos=0;}
+      });
+    })();
+    </script>
+    <script>
+    (function(){
       var GAP = 12;
       function getMinOffset() {
         return window.innerWidth <= 768 ? 80 : 72;

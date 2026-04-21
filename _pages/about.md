@@ -100,3 +100,15 @@ Here is a homepage about Jiepeng.
 
   </div>
 </section>
+
+<section class="home-section home-section--closing" id="closing">
+  <div class="closing-card">
+    <h2 class="closing-card__greeting">Thanks for stopping by!</h2>
+    <p class="closing-card__text">I am actively seeking a <span class="closing-highlight">Ph.D. position</span> for 2027 Fall / 2028 Spring, as well as <span class="closing-highlight">research internship</span> opportunities.</p>
+    <p class="closing-card__sub">Feel free to reach out if you'd like to collaborate or just say hi.</p>
+    <div class="about-actions">
+      <a href="mailto:{{ site.author.email }}" class="about-btn"><i class="fas fa-envelope"></i> Send Email</a>
+      <button class="about-btn about-btn--secondary copy-btn" onclick="navigator.clipboard.writeText('{{ site.author.email }}');var t=document.createElement('span');t.className='copy-toast';t.textContent='Copied!';this.appendChild(t);setTimeout(function(){t.classList.add('copy-toast--fade');},50);setTimeout(function(){t.remove();},1600);"><i class="fas fa-copy"></i> Copy Address</button>
+    </div>
+  </div>
+</section>

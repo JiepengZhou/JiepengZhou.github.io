@@ -98,3 +98,19 @@ author_profile: true
     </div>
   </article>
 </div>
+
+<div class="kv-expandable">
+  <div class="kv-list kv-list--all" style="display:none;">
+    <h2 style="margin-top:1.5rem;">Patents & Copyrights</h2>
+    <div class="kv-item">
+      <div class="kv-item__main"><strong>BHL: A Method for Identifying Generative Long Text</strong> — First Author<br><span style="font-size:0.85em;color:#6b7280;">[Invention Patent] (Granted, Patent No: ZL202410848653.9) Utilizing Hierarchy-Attention mechanism to distinguish AI-generated long text from human-written text.</span></div>
+    </div>
+    <div class="kv-item">
+      <div class="kv-item__main"><strong>Hospice Care Platform Based on Front-End and Back-End Separation</strong> — First Author<br><span style="font-size:0.85em;color:#6b7280;">[Software Copyright] (Granted, Registration No: 2024SR0577013) A one-stop hospice care platform built with SpringBoot and Vue3.</span></div>
+    </div>
+    <div class="kv-item">
+      <div class="kv-item__main"><strong>WordWorld Vocabulary Software</strong> — First Author<br><span style="font-size:0.85em;color:#6b7280;">[Software Copyright] (Granted, Registration No: 2024SR1130897) A personalized vocabulary memorization Windows application built with C#.</span></div>
+    </div>
+  </div>
+  <button class="kv-view-all" onclick="var list=this.previousElementSibling;var open=list.style.display!=='none';list.style.display=open?'none':'block';this.textContent=open?'View Patents & Copyrights':'Collapse';">View Patents & Copyrights</button>
+</div>
