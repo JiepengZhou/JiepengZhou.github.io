@@ -65,7 +65,7 @@ author_profile: true
       </h3>
       <div class="pub-card__meta">
         <span class="pub-card__authors">Jin Cui*, Jiaqi Guo*, <strong>Jiepeng Zhou*</strong>, Ruixuan Yang, Jiayi Lu... <span class="pub-card__more-authors">+4</span></span>
-        <span class="pub-card__type">Arxiv Preprint</span>
+        <span class="pub-card__type">IJCAI 2026，CCF B</span>
       </div>
       <p class="pub-card__abstract">
         A multi-teacher distillation framework that dynamically fuses diverse teacher biases, enabling active reasoning internalization in lightweight models under minimal data.

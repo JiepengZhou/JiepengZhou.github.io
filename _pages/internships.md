@@ -16,7 +16,7 @@ author_profile: true
       <div class="intern-item__title">JD</div>
       <div class="intern-item__sub">Algorithm Intern · Supervised by Yongqiang Liu</div>
     </div>
-    <div class="intern-item__date edu-item__date">2026.01 - Now</div>
+    <div class="intern-item__date edu-item__date">2026.01 - 2026.05</div>
   </div>
     <div class="intern-item__notes">
       <p>
@@ -39,7 +39,7 @@ author_profile: true
       <div class="intern-item__title">DCAI, Peking University</div>
       <div class="intern-item__sub">Research Intern · Supervised by <a href="https://zwt233.github.io/">Prof. Wentao Zhang</a></div>
     </div>
-    <div class="intern-item__date edu-item__date">2025.12 - 2026.04</div>
+    <div class="intern-item__date edu-item__date">2025.12 - Now</div>
   </div>
     <div class="intern-item__notes">
       <p>
