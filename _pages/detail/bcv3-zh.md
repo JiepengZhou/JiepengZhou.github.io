@@ -21,11 +21,11 @@ lang: zh
 
 ![现有数据集对比]({{ site.baseurl }}/images/Papers/BCV3/bcv3_table_1.png)
 
-多模态 Agent 框架存在一下不足：
+多模态 Agent 框架存在以下不足：
 
 - **工具强度不够**： 目前多数框架的工具较多但实际搜索过程中调用的次数较少，意味着工具实际无效，但对模型又有干扰作用；
 - **工具实现细节**： 我们测试了如 *图片反搜是否将图拼接会上下文* *图搜和文搜做summary机制* *设计即阅即焚避免上下文长度过长*等机制；
-- **可泛化行**： 在不同的模型上、不同的数据集上，框架都应该相比原模型带来性能提升，但现有框架多数只对某个数据集有效。
+- **可泛化性**： 在不同的模型上、不同的数据集上，框架都应该相比原模型带来性能提升，但现有框架多数只对某个数据集有效。
 
 ---
 
@@ -53,8 +53,8 @@ lang: zh
 
 ### 2.3 数据样本示例
 
-![Sample_1]({{ site.baseurl }}/images/Papers/007_Science_Biology_1.png)
-![Sample_2]({{ site.baseurl }}/images/Paper/007_Science_Biology_2.png)
+![Sample_1]({{ site.baseurl }}/images/Papers/BCV3/007_Science_Biology_1.png)
+![Sample_2]({{ site.baseurl }}/images/Paper/BCV3/007_Science_Biology_2.png)
 
 <details class="code-fold">
 <summary>Example Sample (JSON)</summary>
@@ -325,8 +325,6 @@ lang: zh
 }
 {% endraw %}</code></pre>
 </details>
-
-放两个case，两张图
 
 2.4 Agent 框架设计
 
