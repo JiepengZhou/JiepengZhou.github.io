@@ -36,7 +36,7 @@ lang: zh
 | `Contrastive(对比)` | 多候选方案对比淘汰，锁定最优解 |
 | `Counterfactual(反事实)` | 修改条件反推结果，定位关键约束 |
 
-![t-SNE]({{ site.baseurl }}/images/Papers/MIND/t-SNE.png)
+![t-SNE]({{ site.baseurl }}/images/Papers/MIND/t-SNE.png){: width="60%" }
 
 从t-SNE结果表明，8类视角在隐空间形成了边界清晰，互不重叠的聚类簇，8类推理不是文本措辞差异，而是模型内部完全不同的激活表征：
 - 在正式蒸馏前，先用8类推理训练8个专用小模型，每个仅用单视角数据进行蒸馏
@@ -50,37 +50,60 @@ lang: zh
 ![metanet]({{ site.baseurl }}/images/Papers/MIND/Metanet.png)
 
 ### 3. 训练流程
-（1）Feedback-Driven Inertia Calibration：反馈驱动惯性校准（MetaNet 更新）
+
+**（1）Feedback-Driven Inertia Calibration：反馈驱动惯性校准（MetaNet 更新）**
+
 核心：摒弃单步瞬时损失，依托学生长期损失表征推理可学性，实现 MetaNet 打分动态贴合学生实时能力。
 
-分阶段训练策略
+**分阶段训练策略：**
+- **前期**：少量 Epoch 完成 MetaNet 预热；
+- **后期**：MetaNet 与学生模型同步迭代，MetaNet 设置更小学习率、更大梯度累积，构造优化滞后惯性，过滤单批次训练随机噪声。
 
-前期：少量 Epoch 完成 MetaNet 预热；
-后期：MetaNet 与学生模型同步迭代，MetaNet 设置更小学习率、更大梯度累积，构造优化滞后惯性，过滤单批次训练随机噪声。
+**ListNet-KL 排序损失约束：**
 
-ListNet-KL 排序损失约束
-\(\mathcal{L}_{meta}=D_{KL}\big (\pi _{\tau }(s)\, \| \, \pi _{\tau }(-\mathcal{L}_{real})\big )\)
+$$\mathcal{L}_{meta}=D_{KL}\big (\pi _{\tau }(s)\, \| \, \pi _{\tau }(-\mathcal{L}_{real})\big )$$
 
-\(\mathcal{L}_{real}\)：学生在单条推理\(r_k\)上的交叉熵损失；损失越高→该推理和学生当前能力越不匹配；
-\(\pi_\tau(\cdot)\)：带温度系数\(\tau\)的 Softmax 概率分布；
-优化目标：缩小 MetaNet 预测得分分布\(\pi_\tau(s)\)与真实难度分布\(\pi_\tau(-\mathcal{L}_{real})\)的 KL 散度，让打分匹配真实学习难度。
+- $\mathcal{L}_{real}$：学生在单条推理 $r_k$ 上的交叉熵损失；损失越高→该推理和学生当前能力越不匹配；
+- $\pi_\tau(\cdot)$：带温度系数 $\tau$ 的 Softmax 概率分布；
+- **优化目标**：缩小 MetaNet 预测得分分布 $\pi_\tau(s)$ 与真实难度分布 $\pi_\tau(-\mathcal{L}_{real})$ 的 KL 散度，让打分匹配真实学习难度。
 
 
-（2）基于兼容性得分动态筛选有效推理子集依据 MetaNet 输出兼容性分数\(s_k\)，筛选高适配推理、丢弃噪声路径。
-动态候选集筛选公式
-\(\mathcal{I}_{dyn}=\big\{ k\mid s_{k}\geq \max(s)*\beta \big\}\)
-\(\beta\)为超参数阈值，仅保留得分≥最高分 ×β 的推理，剔除不兼容样本。
-子集内权重归一化
-\(\alpha _{k}=\frac {\exp \left( s_{k}/\tau _{student }\right) }{\sum_{j\in \mathcal{I}_{dyn}}\exp \left( s_{j}/\tau _{student }\right) }, \forall k\in \mathcal{I}_{dyn}\)
-仅在筛选后的集合\(\mathcal{I}_{dyn}\)中计算每条推理的融合权重\(\alpha_k\)。
-（3）学生总损失：\(\boldsymbol{\mathcal{L}_{total}=\mathcal{L}_{SFT}+\lambda \mathcal{L}_{cons}}\)损失由加权监督微调损失+一致性正则损失加权组成，\(\lambda\)为正则项权重系数。① 偏好加权 SFT 损失 \(\mathcal{L}_{SFT}\)\(\mathcal{L}_{S F T}=\sum_{k \in \mathcal{I}_{d y n}} \alpha_{k} \cdot \mathcal{L}_{C E}\left(r_{k} | x ; \theta\right)\)
-使用动态适配权重\(\alpha_k\)加权交叉熵；
-引导模型优先学习与自身能力匹配度更高的推理路径。
-② 成对一致性正则损失 \(\mathcal{L}_{cons}\)\(\mathcal{L}_{cons}=\sum_{\substack{i, j \in \mathcal{I}_{dyn} \\ i<j}}\left(\alpha_{i} \cdot \alpha_{j}\right) \cdot JSD\left(P_{i} \| P_{j}\right)\)
-\(P_i,P_j\)：同问题下两条不同推理对应的答案概率分布；
-JSD：JS 散度，衡量分布差异；
-作用：约束多视角推理答案分布趋于一致，避免模型学到互相矛盾的推理逻辑，防止推理表征碎片化。
+**（2）基于兼容性得分动态筛选有效推理子集**
 
+依据 MetaNet 输出兼容性分数 $s_k$，筛选高适配推理、丢弃噪声路径。
+
+**动态候选集筛选公式：**
+
+$$\mathcal{I}_{dyn}=\big\{ k\mid s_{k}\geq \max(s)*\beta \big\}$$
+
+$\beta$ 为超参数阈值，仅保留得分 ≥ 最高分 × $\beta$ 的推理，剔除不兼容样本。
+
+**子集内权重归一化：**
+
+$$\alpha _{k}=\frac {\exp \left( s_{k}/\tau _{student }\right) }{\sum_{j\in \mathcal{I}_{dyn}}\exp \left( s_{j}/\tau _{student }\right) }, \forall k\in \mathcal{I}_{dyn}$$
+
+仅在筛选后的集合 $\mathcal{I}_{dyn}$ 中计算每条推理的融合权重 $\alpha_k$。
+
+
+**（3）学生总损失**
+
+$$\boldsymbol{\mathcal{L}_{total}=\mathcal{L}_{SFT}+\lambda \mathcal{L}_{cons}}$$
+
+损失由加权监督微调损失 + 一致性正则损失加权组成，$\lambda$ 为正则项权重系数。
+
+① **偏好加权 SFT 损失 $\mathcal{L}_{SFT}$**：
+
+$$\mathcal{L}_{S F T}=\sum_{k \in \mathcal{I}_{d y n}} \alpha_{k} \cdot \mathcal{L}_{C E}\left(r_{k} | x ; \theta\right)$$
+
+使用动态适配权重 $\alpha_k$ 加权交叉熵；引导模型优先学习与自身能力匹配度更高的推理路径。
+
+② **成对一致性正则损失 $\mathcal{L}_{cons}$**：
+
+$$\mathcal{L}_{cons}=\sum_{\substack{i, j \in \mathcal{I}_{dyn} \\ i<j}}\left(\alpha_{i} \cdot \alpha_{j}\right) \cdot JSD\left(P_{i} \| P_{j}\right)$$
+
+- $P_i,P_j$：同问题下两条不同推理对应的答案概率分布；
+- JSD：JS 散度，衡量分布差异；
+- **作用**：约束多视角推理答案分布趋于一致，避免模型学到互相矛盾的推理逻辑，防止推理表征碎片化。
 
 ### 4. 对比
 - 学生模型：Qwen2.5-1.5B、Qwen2.5-7B、Llama3.1-8B
