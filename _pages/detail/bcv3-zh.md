@@ -53,8 +53,8 @@ lang: zh
 
 ### 2.3 数据样本示例
 
-![Sample_1]({{ site.baseurl }}/images/Papers/BCV3/007_Science_Biology_1.png)
-![Sample_2]({{ site.baseurl }}/images/Paper/BCV3/007_Science_Biology_2.png)
+![Sample_1]({{ site.baseurl }}/images/Papers/BCV3/007_Science_Biology_1.jpg)
+![Sample_2]({{ site.baseurl }}/images/Papers/BCV3/007_Science_Biology_2.jpg)
 
 <details class="code-fold">
 <summary>Example Sample (JSON)</summary>
