@@ -11,7 +11,56 @@ author_profile: true
 <div class="pub-list">
   <article class="pub-card">
     <div class="pub-card__thumb">
-      <img src="../images/Papers/BCV3.png" alt="BCV3" />
+      <img src="../images/Papers/V-Socrate/V-Socrate.png" alt="V-Socrate" />
+    </div>
+    <div class="pub-card__body">
+      <h3 class="pub-card__title">
+        <a target="_blank" rel="noopener">
+          V-Socrate: Socratic Multi-Agent Keyframe Selection for Long Video Understanding
+        </a>
+      </h3>
+      <div class="pub-card__meta">
+        <span class="pub-card__authors"><strong>Jiepeng Zhou*</strong>, Huanyao Zhang*, Jin Cui*, Shen Li, ... <span class="pub-card__more-authors">+5</span></span>
+        <span class="pub-card__type">Arxiv Preprint</span>
+      </div>
+      <p class="pub-card__abstract">
+        A training-free, duration-aware explore-then-verify framework that improves long-video question answering through multi-agent keyframe selection while reducing visual-token usage.
+      </p>
+      <div class="pub-card__actions">
+        <a class="pub-btn" href="" target="_blank" rel="noopener">Paper</a>
+        <a class="pub-btn pub-btn--ghost" href="{{ site.baseurl }}/detail/v-socrate-en/" rel="noopener">Detail</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub-card">
+    <div class="pub-card__thumb">
+      <img src="../images/Papers/DeepVoyager/DeepVoyager.png" alt="DeepVoyager" />
+    </div>
+    <div class="pub-card__body">
+      <h3 class="pub-card__title">
+        <a target="_blank" rel="noopener">
+          DeepVoyager-VL: Incentivizing Vision-in-the-Loop Search for Long-Horizon Multimodal Agents
+        </a>
+      </h3>
+      <div class="pub-card__meta">
+        <span class="pub-card__authors">Huanyao Zhang*, <strong>Jiepeng Zhou*</strong>, Runhao Zhao*, Yanzhe Shan, Jiaoyang Chen, ... <span class="pub-card__more-authors">+9</span></span>
+        <span class="pub-card__type">Arxiv Preprint</span>
+      </div>
+      <p class="pub-card__abstract">
+        A vision-in-the-loop deep-search framework that enables long-horizon multimodal agents to actively acquire visual evidence through event-graph data synthesis and on-demand image loading.
+      </p>
+      <div class="pub-card__actions">
+        <a class="pub-btn" href="" target="_blank" rel="noopener">Paper</a>
+        <a class="pub-btn pub-btn--ghost" href="{{ site.baseurl }}/detail/deepvoyager-en/" rel="noopener">Detail</a>
+      </div>
+    </div>
+  </article>
+
+
+  <article class="pub-card">
+    <div class="pub-card__thumb">
+      <img src="../images/Papers/BCV3/BCV3.png" alt="BCV3" />
     </div>
     <div class="pub-card__body">
       <h3 class="pub-card__title">
@@ -24,7 +73,7 @@ author_profile: true
         <span class="pub-card__type">Arxiv Preprint</span>
       </div>
       <p class="pub-card__abstract">
-        A visual web browsing benchmark for multimodal Agents, spanning 5 vertical domains with cross-page aggregation and multi-hop reasoning tasks to evaluate visual grounding capabilities.
+        A visual web browsing benchmark for multimodal agents, spanning five vertical domains with cross-page aggregation and multi-hop reasoning tasks.
       </p>
       <div class="pub-card__actions">
         <a class="pub-btn" href="https://arxiv.org/abs/2602.12876" target="_blank" rel="noopener">Paper</a>
@@ -35,7 +84,7 @@ author_profile: true
 
   <article class="pub-card">
     <div class="pub-card__thumb">
-      <img src="../images/Papers/mind.png" alt="MIND" />
+      <img src="../images/Papers/MIND/mind.png" alt="MIND" />
     </div>
     <div class="pub-card__body">
       <h3 class="pub-card__title">
@@ -57,6 +106,30 @@ author_profile: true
 
   <article class="pub-card">
     <div class="pub-card__thumb">
+      <img src="../images/Papers/DeltaUI/DeltaUI.png" alt="DeltaUI" />
+    </div>
+    <div class="pub-card__body">
+      <h3 class="pub-card__title">
+        <a target="_blank" rel="noopener">
+          DeltaUI: Framework-Normalized UI State Transition Modeling for Multi-Task Front-End Engineering
+        </a>
+      </h3>
+      <div class="pub-card__meta">
+        <span class="pub-card__authors">Jiaye Lin, Zhongxu Guan, Huanyao Zhang, Zonghao Ying, Yuehan Zhang, Bohan Zeng, <strong>Jiepeng Zhou</strong>..., <span class="pub-card__more-authors">+2</span></span>
+        <span class="pub-card__type">ACMMM 2026, CCF A</span>
+      </div>
+      <p class="pub-card__abstract">
+        DeltaUI unifies front-end generation, editing, and repair through auditable transitions in a framework-normalized UI state space, with deterministic code realization and execution-aware refinement.
+      </p>
+      <div class="pub-card__actions">
+        <a class="pub-btn" href="" target="_blank" rel="noopener">Paper</a>
+        <a class="pub-btn pub-btn--ghost" href="{{ site.baseurl }}/detail/deltaui-en/" rel="noopener">Detail</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub-card">
+    <div class="pub-card__thumb">
       <img src="../images/Papers/compact.png" alt="compact" />
     </div>
     <div class="pub-card__body">
@@ -64,7 +137,7 @@ author_profile: true
         “The Whole Is Greater Than the Sum of Its Parts”: A Compatibility-Aware Multi-Teacher CoT Distillation Framework
       </h3>
       <div class="pub-card__meta">
-        <span class="pub-card__authors">Jin Cui*, Jiaqi Guo*, <strong>Jiepeng Zhou*</strong>, Ruixuan Yang, Jiayi Lu... <span class="pub-card__more-authors">+4</span></span>
+        <span class="pub-card__authors">Jin Cui*, Jiaqi Guo*, Ruixuan Yang, Jiayi Lu, <strong>Jiepeng Zhou</strong>, ... <span class="pub-card__more-authors">+2</span></span>
         <span class="pub-card__type">IJCAI 2026，CCF B</span>
       </div>
       <p class="pub-card__abstract">
