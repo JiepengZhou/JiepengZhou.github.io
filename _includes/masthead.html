@@ -11,6 +11,84 @@
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+        <svg class="theme-toggle__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path class="theme-toggle__moon" d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path>
+          <g class="theme-toggle__sun">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+          </g>
+        </svg>
+      </button>
     </div>
   </div>
 </div>
+<script>
+(function(){
+  var toggle = document.getElementById('theme-toggle');
+  if (!toggle) return;
+
+  function applyTheme(theme, persist) {
+    var isDark = theme === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    toggle.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+
+    var themeMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeMeta) themeMeta.setAttribute('content', isDark ? '#0d1117' : '#ffffff');
+
+    if (persist) {
+      try {
+        window.localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
+      } catch (error) {}
+    }
+  }
+
+  toggle.addEventListener('click', function(){
+    var nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme, true);
+  });
+
+  applyTheme(document.documentElement.getAttribute('data-theme') || 'light', false);
+})();
+</script>
+<script>
+(function(){
+  var masthead = document.querySelector('.masthead');
+  if (!masthead) return;
+
+  var framePending = false;
+  var lastPull = -1;
+
+  function updateMastheadPull() {
+    framePending = false;
+
+    var negativeScroll = Math.max(0, -(window.scrollY || window.pageYOffset || 0));
+    var visualTop = Math.max(0, masthead.getBoundingClientRect().top);
+    var pull = Math.max(negativeScroll, visualTop);
+    if (pull < 0.5) pull = 0;
+
+    if (Math.abs(pull - lastPull) < 0.25) return;
+    lastPull = pull;
+    masthead.style.setProperty('--masthead-pull', pull.toFixed(2) + 'px');
+    masthead.style.setProperty('--masthead-content-offset', (-pull).toFixed(2) + 'px');
+  }
+
+  function scheduleMastheadPull() {
+    if (framePending) return;
+    framePending = true;
+    window.requestAnimationFrame(updateMastheadPull);
+  }
+
+  window.addEventListener('scroll', scheduleMastheadPull, { passive: true });
+  window.addEventListener('wheel', scheduleMastheadPull, { passive: true });
+  window.addEventListener('touchmove', scheduleMastheadPull, { passive: true });
+  window.addEventListener('resize', scheduleMastheadPull);
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('scroll', scheduleMastheadPull, { passive: true });
+  }
+
+  scheduleMastheadPull();
+})();
+</script>

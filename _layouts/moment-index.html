@@ -1,0 +1,89 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="detail-page paper-detail-page moment-index-page">
+    {% include browser-upgrade.html %}
+
+    <div class="paper-detail-layout moment-index-layout">
+      <aside class="paper-detail-sidebar moment-index-sidebar" aria-label="Moment navigation">
+        <a class="paper-detail-home" href="{{ site.baseurl }}/#about-me">
+          <span aria-hidden="true">&lt;</span>
+          <span>HomePage</span>
+        </a>
+
+        <div class="moment-index-profile">
+          <img src="{{ site.baseurl }}/{{ site.author.avatar }}" alt="{{ site.author.name }}">
+          <div>
+            <strong>Moments</strong>
+            <span>Jiepeng Zhou</span>
+          </div>
+        </div>
+
+        <p class="moment-index-sidebar-copy">
+          Research milestones, everyday life, travel, and small memories worth keeping.
+        </p>
+
+        <div class="moment-index-filter">
+          <span class="moment-index-filter__label">FILTER BY</span>
+          <div class="moment-filter moment-filter--sidebar" aria-label="Filter moments by tag">
+            <button class="is-active" type="button" data-moment-filter="all" aria-pressed="true">All</button>
+            {% for filter in page.moment_filters %}
+            <button type="button" data-moment-filter="{{ filter | downcase | escape }}" aria-pressed="false">{{ filter }}</button>
+            {% endfor %}
+          </div>
+
+          <div class="moment-index-time-filter" data-moment-calendar>
+            <div class="moment-calendar__header">
+              <span class="moment-index-filter__label">ARCHIVE</span>
+              <button class="moment-calendar__reset is-active" type="button" data-moment-date-reset aria-pressed="true">All dates</button>
+            </div>
+            <div
+              class="moment-calendar__year-nav"
+              data-moment-year-nav
+              data-calendar-years="{{ page.moment_calendar_years | join: ',' }}"
+              aria-label="Choose archive year"
+            >
+              <button type="button" data-moment-year-previous aria-label="Previous year">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 18 9 12l6-6"></path>
+                </svg>
+              </button>
+              <span data-moment-year-display aria-live="polite">--</span>
+              <button type="button" data-moment-year-next aria-label="Next year">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="moment-calendar__months" data-moment-month-filter aria-label="Filter moments by month"></div>
+            <div class="moment-calendar__legend" aria-label="Moment activity legend">
+              <span>Less</span>
+              <i data-level="0" aria-hidden="true"></i>
+              <i data-level="1" aria-hidden="true"></i>
+              <i data-level="2" aria-hidden="true"></i>
+              <i data-level="3" aria-hidden="true"></i>
+              <span>More</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="paper-detail-main moment-index-main" id="main" role="main">
+        <section class="moment-index-panel">
+          {{ content }}
+        </section>
+      </main>
+    </div>
+
+    {% include scripts.html %}
+    <script src="{{ '/assets/js/moment.js' | prepend: site.baseurl }}"></script>
+  </body>
+</html>

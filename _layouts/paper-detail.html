@@ -1,0 +1,116 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="detail-page paper-detail-page">
+    {% include browser-upgrade.html %}
+
+    <div class="paper-detail-layout">
+      <aside class="paper-detail-sidebar" aria-label="Paper navigation">
+        <a class="paper-detail-home" href="{{ site.baseurl }}/#publications">
+          <span aria-hidden="true">&lt;</span>
+          <span>HomePage</span>
+        </a>
+
+        {% if page.paper_mark or page.paper_short_name %}
+        <div class="paper-detail-sidebar-card">
+          <span class="paper-detail-sidebar-mark" aria-hidden="true">
+            {{ page.paper_mark | default: 'P' }}
+          </span>
+          <span class="paper-detail-sidebar-copy">
+            <strong>{{ page.paper_short_name | default: page.paper_title | strip_html }}</strong>
+            {% if page.paper_status %}
+            <span>{{ page.paper_status }}</span>
+            {% endif %}
+            {% if page.paper_rank %}
+            <small>{{ page.paper_rank }}</small>
+            {% elsif page.paper_venue %}
+            <small>{{ page.paper_venue }}</small>
+            {% endif %}
+          </span>
+        </div>
+        {% endif %}
+
+        <div class="paper-detail-position">
+          <span class="paper-detail-position__label">READING PROGRESS</span>
+          <div class="paper-detail-position__track" aria-hidden="true">
+            <span id="paper-position-bar"></span>
+          </div>
+        </div>
+
+        <nav class="paper-detail-toc" aria-label="Contents">
+          <span class="paper-detail-toc__label">CONTENTS</span>
+          <span class="paper-detail-toc__indicator" id="paper-toc-indicator" aria-hidden="true"></span>
+          <ol id="paper-toc-list"></ol>
+        </nav>
+      </aside>
+
+      <main class="paper-detail-main" id="main" role="main">
+        <article class="paper-detail-article">
+          {% if page.hero_image %}
+          <figure class="paper-detail-hero">
+            <img src="{{ page.hero_image | prepend: site.baseurl }}" alt="{{ page.hero_alt | default: page.paper_title | strip_html }}">
+          </figure>
+          {% endif %}
+
+          <header class="paper-detail-header">
+            <h1>{{ page.paper_title | default: page.title }}</h1>
+            {% if page.paper_subtitle %}
+            <p class="paper-detail-subtitle">{{ page.paper_subtitle }}</p>
+            {% endif %}
+            <span class="paper-detail-title-accent" aria-hidden="true"></span>
+
+            {% if page.paper_authors %}
+            <p class="paper-detail-authors">{{ page.paper_authors }}</p>
+            {% endif %}
+
+            <div class="paper-detail-meta" aria-label="Paper information">
+              {% if page.paper_status %}
+              <span class="paper-detail-badge paper-detail-badge--status">{{ page.paper_status }}</span>
+              {% endif %}
+              {% if page.paper_venue %}
+              <span class="paper-detail-badge">{{ page.paper_venue }}</span>
+              {% endif %}
+              {% if page.paper_rank %}
+              <span class="paper-detail-badge">{{ page.paper_rank }}</span>
+              {% endif %}
+              {% if page.paper_url %}
+              <a class="paper-detail-paper-link" href="{{ page.paper_url }}" target="_blank" rel="noopener">
+                <span class="pub-btn__logo pub-btn__logo--arxiv" aria-hidden="true"></span>
+                <span>arXiv</span>
+              </a>
+              {% endif %}
+              {% for topic in page.paper_topics %}
+              <span class="paper-detail-topic">{{ topic }}</span>
+              {% endfor %}
+            </div>
+          </header>
+
+          <div class="paper-detail-content" id="paper-detail-content">
+            {{ content }}
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <div class="paper-lightbox" id="paper-lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+      <button class="paper-lightbox__close" type="button" aria-label="Close image preview">×</button>
+      <button class="paper-lightbox__nav paper-lightbox__nav--prev" type="button" aria-label="Previous image">‹</button>
+      <figure class="paper-lightbox__figure">
+        <img class="paper-lightbox__image" src="" alt="">
+        <figcaption class="paper-lightbox__caption"></figcaption>
+      </figure>
+      <button class="paper-lightbox__nav paper-lightbox__nav--next" type="button" aria-label="Next image">›</button>
+    </div>
+
+    {% include scripts.html %}
+    <script src="{{ '/assets/js/paper-detail.js' | prepend: site.baseurl }}"></script>
+  </body>
+</html>

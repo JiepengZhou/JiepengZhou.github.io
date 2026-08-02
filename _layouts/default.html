@@ -31,7 +31,7 @@ layout: compress
       <div class="site-bottom__inner">
         <div class="site-bottom__quote">
           <span class="site-bottom__quote-mark">“</span>
-          <span class="site-bottom__quote-text">I know I am not the perfect one, yet aspire to chase the world and achieve greatness.</span>
+          <span class="site-bottom__quote-text">Embrace all that unfolds, and keep striving to become better.</span>
           <span class="site-bottom__quote-mark">”</span>
         </div>
 
@@ -59,6 +59,86 @@ layout: compress
     <script>
     (function(){
       var GAP = 12;
+      var DETAIL_RETURN_KEY = 'home-detail-return-scroll';
+
+      function readReturnScroll() {
+        try {
+          var value = window.sessionStorage.getItem(DETAIL_RETURN_KEY);
+          if (!value) return null;
+          var state = JSON.parse(value);
+          if (!state || state.path !== location.pathname || typeof state.y !== 'number') return null;
+          return state;
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function saveReturnScroll(link) {
+        try {
+          var url = new URL(link.href, location.href);
+          if (url.origin !== location.origin ||
+              !/(?:^|\/)(?:paper-detail|intern-detail)\//.test(url.pathname)) return;
+          window.sessionStorage.setItem(DETAIL_RETURN_KEY, JSON.stringify({
+            path: location.pathname,
+            x: window.scrollX || 0,
+            y: window.scrollY || window.pageYOffset || 0
+          }));
+        } catch (error) {}
+      }
+
+      function restoreReturnScroll(state) {
+        if (!state) return;
+        try {
+          window.sessionStorage.removeItem(DETAIL_RETURN_KEY);
+        } catch (error) {}
+
+        if (location.hash) {
+          history.replaceState(history.state, '', location.pathname + location.search);
+        }
+
+        var root = document.documentElement;
+        var previousBehavior = root.style.scrollBehavior;
+        root.style.scrollBehavior = 'auto';
+
+        function applyPosition() {
+          window.scrollTo({ left: state.x || 0, top: state.y, behavior: 'auto' });
+        }
+
+        applyPosition();
+        requestAnimationFrame(function(){
+          applyPosition();
+          requestAnimationFrame(applyPosition);
+        });
+        setTimeout(function(){
+          applyPosition();
+          root.style.scrollBehavior = previousBehavior;
+          if ('scrollRestoration' in history) history.scrollRestoration = 'auto';
+        }, 150);
+      }
+
+      var returnScroll = readReturnScroll();
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = returnScroll ? 'manual' : 'auto';
+      }
+      document.addEventListener('click', function(e) {
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        var link = e.target.closest('a[href]');
+        if (!link || link.target === '_blank' || link.hasAttribute('download')) return;
+        saveReturnScroll(link);
+      }, true);
+      window.addEventListener('pageshow', function(){
+        restoreReturnScroll(readReturnScroll());
+      });
+
+      function isHistoryNavigation() {
+        var entries = window.performance && performance.getEntriesByType
+          ? performance.getEntriesByType('navigation')
+          : [];
+        if (entries.length) return entries[0].type === 'back_forward';
+        return window.performance &&
+          performance.navigation &&
+          performance.navigation.type === performance.navigation.TYPE_BACK_FORWARD;
+      }
       function getMinOffset() {
         return window.innerWidth <= 768 ? 80 : 72;
       }
@@ -101,9 +181,87 @@ layout: compress
         scrollToHash(hash);
         history.pushState(null, '', '#' + hash);
       }, true);
-      if (location.hash) {
+      if (location.hash && !returnScroll && !isHistoryNavigation()) {
         setTimeout(function(){ scrollToHash(location.hash.slice(1)); }, 150);
       }
+    })();
+    </script>
+    <script>
+    (function(){
+      var main = document.getElementById('main');
+      var sidebar = main && main.querySelector('.sidebar');
+      var homeSection = main && main.querySelector('.home-section');
+      var footer = document.querySelector('.site-bottom');
+      if (!sidebar || !homeSection || !footer) return;
+
+      var framePending = false;
+      function updateSidebarBottom() {
+        framePending = false;
+        if (window.getComputedStyle(sidebar).position !== 'fixed') {
+          sidebar.style.removeProperty('--home-sidebar-bottom');
+          return;
+        }
+
+        var gap = 16;
+        var footerTop = footer.getBoundingClientRect().top;
+        var visibleFooterHeight = Math.max(0, window.innerHeight - footerTop);
+        var bottom = Math.max(gap, visibleFooterHeight + gap);
+        sidebar.style.setProperty('--home-sidebar-bottom', bottom + 'px');
+      }
+
+      function scheduleSidebarUpdate() {
+        if (framePending) return;
+        framePending = true;
+        window.requestAnimationFrame(updateSidebarBottom);
+      }
+
+      window.addEventListener('scroll', scheduleSidebarUpdate, { passive: true });
+      window.addEventListener('resize', scheduleSidebarUpdate);
+      window.addEventListener('load', scheduleSidebarUpdate);
+
+      if ('ResizeObserver' in window) {
+        var observer = new ResizeObserver(scheduleSidebarUpdate);
+        observer.observe(main);
+        observer.observe(footer);
+      }
+
+      scheduleSidebarUpdate();
+    })();
+    </script>
+    <script>
+    (function(){
+      var firstSection = document.querySelector('.home-section');
+      var home = firstSection && firstSection.closest('.page__content');
+      if (!home || !('IntersectionObserver' in window)) return;
+
+      var targets = home.querySelectorAll(
+        '.home-section, .pub-card, .edu-item, .intern-entry, .kv-item'
+      );
+
+      var revealObserver = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          var element = entry.target;
+          if (entry.isIntersecting) {
+            element.classList.add('scroll-reveal--visible');
+            return;
+          }
+
+          element.classList.remove('scroll-reveal--visible');
+          element.classList.toggle(
+            'scroll-reveal--from-top',
+            entry.boundingClientRect.top < 0
+          );
+        });
+      }, {
+        threshold: 0.01,
+        rootMargin: '80px 0px 80px 0px'
+      });
+
+      targets.forEach(function(element, index){
+        element.classList.add('scroll-reveal');
+        element.style.setProperty('--scroll-reveal-delay', (index % 4) * 35 + 'ms');
+        revealObserver.observe(element);
+      });
     })();
     </script>
 

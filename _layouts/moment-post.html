@@ -1,0 +1,128 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body
+    class="detail-page paper-detail-page moment-detail-page"
+    style="--moment-accent: {{ page.moment_accent | default: '#2563eb' }}; --moment-accent-alt: {{ page.moment_accent_alt | default: '#38bdf8' }};"
+  >
+    {% include browser-upgrade.html %}
+
+    <div class="paper-detail-layout moment-detail-layout">
+      <aside class="paper-detail-sidebar moment-detail-sidebar" aria-label="Moment navigation">
+        <a class="paper-detail-home" href="{{ site.baseurl }}/blog/">
+          <span aria-hidden="true">&lt;</span>
+          <span>All Moments</span>
+        </a>
+
+        <div class="moment-detail-date-card">
+          <time datetime="{{ page.moment_date | date_to_xmlschema }}">
+            <strong>{{ page.moment_date | date: "%-d" }}</strong>
+            <span>{{ page.moment_date | date: "%B %Y" }}</span>
+          </time>
+          {% if page.moment_location %}
+          <small>{{ page.moment_location }}</small>
+          {% endif %}
+        </div>
+
+        <a class="moment-detail-home-link" href="{{ site.baseurl }}/#about-me">HomePage</a>
+
+        <div class="paper-detail-position" data-detail-progress data-min-sections="2">
+          <span class="paper-detail-position__label">READING PROGRESS</span>
+          <div class="paper-detail-position__track" aria-hidden="true">
+            <span id="paper-position-bar"></span>
+          </div>
+        </div>
+
+        <nav class="paper-detail-toc" aria-label="Contents" data-detail-toc>
+          <span class="paper-detail-toc__label">CONTENTS</span>
+          <span class="paper-detail-toc__indicator" id="paper-toc-indicator" aria-hidden="true"></span>
+          <ol id="paper-toc-list"></ol>
+        </nav>
+      </aside>
+
+      <main class="paper-detail-main moment-detail-main" id="main" role="main">
+        <article class="paper-detail-article moment-detail-article">
+          {% if page.moment_cover %}
+          <figure class="paper-detail-hero moment-detail-hero">
+            <img
+              src="{{ page.moment_cover | prepend: site.baseurl }}"
+              alt="{{ page.moment_cover_alt | default: page.title }}"
+            >
+          </figure>
+          {% endif %}
+
+          <header class="moment-detail-header">
+            <span class="moment-detail-kicker">Moment · {{ page.moment_date | date: "%B %Y" }}</span>
+            <h1>{{ page.title }}</h1>
+            <span class="paper-detail-title-accent" aria-hidden="true"></span>
+
+            {% if page.moment_summary %}
+            <p class="moment-detail-summary">{{ page.moment_summary }}</p>
+            {% endif %}
+
+            <div class="moment-detail-meta">
+              <time datetime="{{ page.moment_date | date_to_xmlschema }}">
+                {{ page.moment_date | date: "%B %-d, %Y" }}
+              </time>
+              {% if page.moment_location %}
+              <span>{{ page.moment_location }}</span>
+              {% endif %}
+            </div>
+
+            {% if page.moment_tags %}
+            <div class="moment-detail-tags" aria-label="Moment tags">
+              {% for tag in page.moment_tags %}
+              <span>{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </header>
+
+          <div class="paper-detail-content moment-detail-content" id="paper-detail-content">
+            {{ content }}
+
+            {% if page.moment_gallery and page.moment_gallery.size > 0 %}
+            <h2 id="gallery">Gallery</h2>
+            <div class="moment-gallery" aria-label="Moment photo gallery">
+              {% for image in page.moment_gallery %}
+              <figure>
+                <img
+                  src="{{ image.src | prepend: site.baseurl }}"
+                  alt="{{ image.alt | default: page.title }}"
+                  loading="lazy"
+                  decoding="async"
+                >
+                {% if image.caption %}
+                <figcaption>{{ image.caption }}</figcaption>
+                {% endif %}
+              </figure>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <div class="paper-lightbox" id="paper-lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+      <button class="paper-lightbox__close" type="button" aria-label="Close image preview">×</button>
+      <button class="paper-lightbox__nav paper-lightbox__nav--prev" type="button" aria-label="Previous image">‹</button>
+      <figure class="paper-lightbox__figure">
+        <img class="paper-lightbox__image" src="" alt="">
+        <figcaption class="paper-lightbox__caption"></figcaption>
+      </figure>
+      <button class="paper-lightbox__nav paper-lightbox__nav--next" type="button" aria-label="Next image">›</button>
+    </div>
+
+    {% include scripts.html %}
+    <script src="{{ '/assets/js/paper-detail.js' | prepend: site.baseurl }}"></script>
+  </body>
+</html>

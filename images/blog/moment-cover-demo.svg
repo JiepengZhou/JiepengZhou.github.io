@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="0.55" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="70"/></filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="180" cy="130" r="210" fill="#fff" opacity=".16" filter="url(#blur)"/>
+  <circle cx="1020" cy="650" r="260" fill="#fff" opacity=".14" filter="url(#blur)"/>
+  <rect x="74" y="74" width="1052" height="612" rx="34" fill="#0f172a" opacity=".18" stroke="#fff" stroke-opacity=".35"/>
+  <text x="110" y="560" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="36" font-weight="700" letter-spacing="5">MOMENT PREVIEW</text>
+  <text x="110" y="620" fill="#fff" opacity=".84" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="25">Replace this illustration with your own cover photo.</text>
+</svg>

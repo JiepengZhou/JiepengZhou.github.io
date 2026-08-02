@@ -16,13 +16,6 @@ layout: compress
 
     <div id="main" role="main" class="main--detail">
       <div class="detail-box">
-        {% if page.pub_id %}
-        <div class="detail-lang">
-          <a class="detail-lang__btn {% if page.lang == 'zh' %}is-active{% endif %}" href="{{ site.baseurl }}/detail/{{ page.pub_id }}-zh/">中文</a>
-          <span class="detail-lang__sep">/</span>
-          <a class="detail-lang__btn {% if page.lang == 'en' %}is-active{% endif %}" href="{{ site.baseurl }}/detail/{{ page.pub_id }}-en/">English</a>
-        </div>
-        {% endif %}
         <div class="detail-box__body">
           {{ content }}
         </div>

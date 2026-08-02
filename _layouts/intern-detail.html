@@ -1,0 +1,123 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body
+    class="detail-page paper-detail-page intern-detail-page"
+    style="--intern-gradient-left: {{ page.intern_gradient_left | default: '#2563eb' }}; --intern-gradient-right: {{ page.intern_gradient_right | default: '#38bdf8' }};"
+  >
+    {% include browser-upgrade.html %}
+
+    <div class="paper-detail-layout intern-detail-layout">
+      <aside class="paper-detail-sidebar intern-detail-sidebar" aria-label="Experience navigation">
+        <a class="paper-detail-home" href="{{ site.baseurl }}/#internships">
+          <span aria-hidden="true">&lt;</span>
+          <span>HomePage</span>
+        </a>
+
+        <div class="intern-detail-sidebar-card">
+          {% if page.intern_logo %}
+          <span class="intern-detail-sidebar-logo intern-detail-logo--{{ page.intern_logo_class | default: 'default' }}">
+            <img src="{{ page.intern_logo | prepend: site.baseurl }}" alt="" aria-hidden="true">
+          </span>
+          {% endif %}
+          <span class="intern-detail-sidebar-copy">
+            <strong>{{ page.intern_short_name | default: page.intern_organization | default: page.title }}</strong>
+            <span>{{ page.intern_role }}</span>
+            <small>{{ page.intern_period }}</small>
+          </span>
+        </div>
+
+        <div class="paper-detail-position" data-detail-progress data-min-sections="3">
+          <span class="paper-detail-position__label">READING PROGRESS</span>
+          <div class="paper-detail-position__track" aria-hidden="true">
+            <span id="paper-position-bar"></span>
+          </div>
+        </div>
+
+        <nav class="paper-detail-toc" aria-label="Contents" data-detail-toc>
+          <span class="paper-detail-toc__label">CONTENTS</span>
+          <span class="paper-detail-toc__indicator" id="paper-toc-indicator" aria-hidden="true"></span>
+          <ol id="paper-toc-list"></ol>
+        </nav>
+      </aside>
+
+      <main class="paper-detail-main intern-detail-main" id="main" role="main">
+        <article class="paper-detail-article intern-detail-article">
+          <header class="intern-detail-header">
+            <div class="intern-detail-eyebrow">
+              <span aria-hidden="true"></span>
+              Internship Experience
+            </div>
+
+            <div class="intern-detail-identity">
+              {% if page.intern_logo %}
+              <div class="intern-detail-logo intern-detail-logo--{{ page.intern_logo_class | default: 'default' }}">
+                <img src="{{ page.intern_logo | prepend: site.baseurl }}" alt="{{ page.intern_logo_alt | default: page.intern_organization }}">
+              </div>
+              {% endif %}
+
+              <div class="intern-detail-heading">
+                <h1>{{ page.intern_organization | default: page.title }}</h1>
+                {% if page.intern_role %}
+                <p class="intern-detail-role">{{ page.intern_role }}</p>
+                {% endif %}
+                <span class="paper-detail-title-accent" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="intern-detail-facts">
+              {% if page.intern_period %}
+              <div class="intern-detail-fact">
+                <span>Period</span>
+                <strong>{{ page.intern_period }}</strong>
+              </div>
+              {% endif %}
+              {% if page.intern_supervisors %}
+              <div class="intern-detail-fact">
+                <span>Supervisor{% if page.intern_supervisors_plural %}s{% endif %}</span>
+                <strong>{{ page.intern_supervisors }}</strong>
+              </div>
+              {% endif %}
+            </div>
+
+            <div class="intern-detail-meta" aria-label="Experience information">
+              {% if page.intern_status %}
+              <span class="intern-detail-status intern-detail-status--{{ page.intern_status | slugify }}">
+                <i aria-hidden="true"></i>{{ page.intern_status }}
+              </span>
+              {% endif %}
+              {% for topic in page.intern_topics %}
+              <span class="intern-detail-tag">{{ topic }}</span>
+              {% endfor %}
+            </div>
+          </header>
+
+          <div class="paper-detail-content intern-detail-content" id="paper-detail-content">
+            {{ content }}
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <div class="paper-lightbox" id="paper-lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+      <button class="paper-lightbox__close" type="button" aria-label="Close image preview">×</button>
+      <button class="paper-lightbox__nav paper-lightbox__nav--prev" type="button" aria-label="Previous image">‹</button>
+      <figure class="paper-lightbox__figure">
+        <img class="paper-lightbox__image" src="" alt="">
+        <figcaption class="paper-lightbox__caption"></figcaption>
+      </figure>
+      <button class="paper-lightbox__nav paper-lightbox__nav--next" type="button" aria-label="Next image">›</button>
+    </div>
+
+    {% include scripts.html %}
+    <script src="{{ '/assets/js/paper-detail.js' | prepend: site.baseurl }}"></script>
+  </body>
+</html>

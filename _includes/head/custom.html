@@ -7,6 +7,15 @@
 <meta name="msapplication-TileImage" content="{{ '/images/mstile-144x144.png?v=M44lzPylqQ' | prepend: site.baseurl }}">
 <meta name="msapplication-config" content="{{ '/images/browserconfig.xml?v=M44lzPylqQ' | prepend: site.baseurl }}">
 <meta name="theme-color" content="#ffffff">
+<script>
+(function(){
+  var theme = 'light';
+  try {
+    if (window.localStorage.getItem('site-theme') === 'dark') theme = 'dark';
+  } catch (error) {}
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
 <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | prepend: site.baseurl }}"/>
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>

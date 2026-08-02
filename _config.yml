@@ -10,7 +10,7 @@ safe                    : false
 
 # Site Settings
 title                    : "Jiepeng Zhou"
-description              : "I am a first-year MPhil student in Data Science at the Hong Kong University of Science and Technology (Guangzhou Campus), my research interests include Multimodal Large Language Models, Light Reasoning and Agentic AI."
+description              : "I am a second-year MPhil student in Data Science at the Hong Kong University of Science and Technology (Guangzhou). My research interests include agentic AI (DeepResearch, Video Understanding), Video Generation, and MLLM/LLM Distillation."
 repository               : "JiepengZhou/JiepengZhou.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -30,11 +30,11 @@ author:
   location         : "Guangzhou, China"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
+  googlescholar    : # "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
   email            : "jzhou827@connect.hkust-gz.edu.cn"
   phone            : "13794132099"
   wechat           : "jaypern1128"
-  researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
+  researchgate     : # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
